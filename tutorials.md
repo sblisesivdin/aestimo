@@ -1,3 +1,5 @@
+[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+
 # Tutorials
 
 * *Tutorial 1 by Robert Steed.: General Usage* http://nbviewer.jupyter.org/github/sblisesivdin/aestimo/blob/master/doc/Aestimo_Tutorial.ipynb
