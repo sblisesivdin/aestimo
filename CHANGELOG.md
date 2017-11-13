@@ -1,3 +1,7 @@
+[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+
+# Release Notes (Changelog)
+
 ### v.1.2 (November 6th, 2017)
 
 *	Quaternary alloys (type A_{x}B_{1-x}C_{y}D_{1-y})
