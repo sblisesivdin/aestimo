@@ -25,7 +25,7 @@ The documentation material on this page is copyrighted. Reuse of the material on
 * Electron wavefunctions,
 * Non-parabolicity,
 * External electric field,
-*Strain for valance band calculations,
+* Strain for valance band calculations,
 
 ### Getting Started
 
