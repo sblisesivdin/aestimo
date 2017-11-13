@@ -3,7 +3,8 @@
 # User's Guide
 
 ```
-ATTENTION: This page is not complete for the latest version. It will be completed as soon as possible.
+ATTENTION: This page is not complete for the latest version. 
+It will be completed as soon as possible.
 ```
 
 ## Overview
