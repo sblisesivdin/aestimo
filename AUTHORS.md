@@ -1,4 +1,6 @@
-# AUTHORs and CONTRIBUTIONS for AESTIMO
+[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+
+# Authors and Contributors
 
 Contributors of Aestimo. Names are listed in alphabetic order. Name, Initials, Email, Institution and Country are given, respectively.
 
