@@ -1,20 +1,48 @@
-![Image](files/aestimobanner.png)
+[Home](index.md) |[Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [TUTORIALS](tutorials.md)
+
 Aestimo is a one-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures. Aestimo is started as a hobby at the beginning of 2012, and become an usable tool which can be used as a co-tool in an educational and/or scientific work.
 
-Aestimo is a GPL software, written by several authors. The code is hosted on Github.
+Aestimo is a [GPL](http://www.gnu.org/copyleft/gpl.txt) software, written by [several authors](AUTHORS.md). The code is hosted on [Github](http://github.com).
 
 Please,
-Report bugs or browse opened issues.
-Browse the code.
-or contribute!
+* Report bugs or [browse opened issues](https://github.com/sblisesivdin/aestimo/issues).
+* [Browse the code](https://github.com/sblisesivdin/aestimo).
+* [Contribute!](DEVSGUIDE.md)
+* or socialize with the community using [G+](https://plus.google.com/117870052292751240561) or [FB](https://www.facebook.com/aestimosolver).
+
+![Image](files/aestimobanner.png)
+
 # Latest Aestimo
 
-Latest version of Aestimo is v.1.1 (November 11th, 2016).
-Download Aestimo
+Latest version of Aestimo is v.1.2 (November 6th, 2017).
 
-Please read User's Guide before downloading or visit release notes page for more information.
+<a href="https://github.com/sblisesivdin/aestimo/releases/download/v.1.2.0/aestimo_v.1.2.0.zip"><img src="files/download.png"/></a>
+
+Please read [User's Guide](USERSGUIDE.md) before downloading or visit [release notes](CHANGELOG.md) page for more information.
+
+## Cite Information
+We will appreciate if any scientific work done using Aestimo v.1.2.0 will contain an acknowledgment and the following reference:
+
+* **R. Steed, H. Hebal, and S. B. Lisesivdin. (2017, November 6). sblisesivdin/aestimo: Version v.1.2 (Version v.1.2.0). Zenodo. http://doi.org/10.5281/zenodo.1042657**
 
 # News
+
+## Version v.1.2.0 is released!
+
+*2017/11/06 19:37 · Dr. S.Bora Lisesivdin*
+
+Nearly one year passed and the new version (v.1.2.0) of Aestimo is ready! Thanks to Robert Steed and Hamza Hebal for their efforts to make Aestimo better. We hope that you enjoy.
+
+Some new features of Aestimo:
+* Quaternary alloys (type A_{x}B_{1-x}C_{y}D_{1-y})
+* Added an improved model for modeling conduction band intersubband transitions
+* Added a periodic boundary condition for the Electric field for modeling repeating structures.
+* Small changes were made like to get Aestimo to work on python3.4, example files were renamed to be more pythonic etc ...
+* Code is moved to GitHub.
+
+Here are the [release notes](CHANGELOG.md).
+
+Version 1.2 can be downloaded from this [link](https://github.com/sblisesivdin/aestimo/releases/download/v.1.2.0/aestimo_v.1.2.0.zip). Aestimo is GPL licensed software. Any improvements, bug reports or feedback are welcome.
 
 ## Moving to GitHub!
 
@@ -27,6 +55,7 @@ Not a single line of code is lost, just moved to another place. This is how we t
 ## Version 1.1 is released!
 
 *2016/11/11 09:50 - Dr. Robert Steed* 
+
 The Aestimo Team is proud to release version 1.1.0 of the Aestimo 1D Self-consistent Schrödinger-Poisson Solver. This release includes some improvements to the intersubband_optical_transitions module. Figure instances are now returned from plotting functions to enable custom alteration and saving of figures. Docstrings for the modules have also been improved for those that explore the codebase using an interactive terminal like ipython. Here are the release notes.
 
 Version 1.1 can be downloaded from https://github.com/sblisesivdin/aestimo/archive/master.zip. Aestimo is GPL licensed software. Any improvements, bug reports or feedback are welcome.
