@@ -4,19 +4,19 @@
 
 Aestimo is a one-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures. Aestimo is started as a hobby at the beginning of 2012, and become an usable tool which can be used as a co-tool in an educational and/or scientific work.
 
-Aestimo is a [GPL](http://www.gnu.org/copyleft/gpl.txt) software, written by [several authors](AUTHORS.md). The code is hosted on [Github](http://github.com).
+Aestimo is a [GPL](http://www.gnu.org/copyleft/gpl.txt) software, written by [contributers](AUTHORS.md). The code is hosted on [Github](http://github.com).
 
 Please,
-* Report bugs or [browse opened issues](https://github.com/sblisesivdin/aestimo/issues).
-* [Browse the code](https://github.com/sblisesivdin/aestimo).
+* Report bugs or [browse opened issues](https://github.com/aestimosolver/aestimo/issues).
+* [Browse the code](https://github.com/aestimosolver/aestimo).
 * [Contribute!](DEVSGUIDE.md)
-* or socialize with the community using [G+](https://plus.google.com/117870052292751240561) or [FB](https://www.facebook.com/aestimosolver).
+* or socialize with the community using [FB](https://www.facebook.com/aestimosolver).
 
 # Latest Aestimo
 
 Latest version of Aestimo is v.1.2 (November 6th, 2017).
 
-<a href="https://github.com/sblisesivdin/aestimo/releases/download/v.1.2.0/aestimo_v.1.2.0.zip"><img src="files/download.png"/></a>
+<a href="https://github.com/aestimosolver/aestimo/releases/download/v.1.2.0/aestimo_v.1.2.0.zip"><img src="files/download.png"/></a>
 
 Please read [User's Guide](USERSGUIDE.md) before downloading or visit [release notes](CHANGELOG.md) page for more information.
 
@@ -42,13 +42,13 @@ Some new features of Aestimo:
 
 Here are the [release notes](CHANGELOG.md).
 
-Version 1.2 can be downloaded from this [link](https://github.com/sblisesivdin/aestimo/releases/download/v.1.2.0/aestimo_v.1.2.0.zip). Aestimo is GPL licensed software. Any improvements, bug reports or feedback are welcome.
+Version 1.2 can be downloaded from this [link](https://github.com/aestimosolver/aestimo/releases/download/v.1.2.0/aestimo_v.1.2.0.zip). Aestimo is GPL licensed software. Any improvements, bug reports or feedback are welcome.
 
 ## Moving to GitHub!
 
 *2017/04/04 22:47 - Dr. S.Bora Lisesivdin*
 
-Today, we moved all our code and issue management from BitBucket to GitHub. You can find the code at github.com/sblisesivdin/aestimo. Now, with this move, we want to open our code to the large user base of GitHub and expect new committers as many as we can find. This move also makes easier for everyone to contribute to aestimo.
+Today, we moved all our code and issue management from BitBucket to GitHub. You can find the code at github.com/aestimosolver/aestimo. Now, with this move, we want to open our code to the large user base of GitHub and expect new committers as many as we can find. This move also makes easier for everyone to contribute to aestimo.
 
 Not a single line of code is lost, just moved to another place. This is how we try to make this change for everyone as comfortable as possible.
 
@@ -58,7 +58,7 @@ Not a single line of code is lost, just moved to another place. This is how we t
 
 The Aestimo Team is proud to release version 1.1.0 of the Aestimo 1D Self-consistent Schrödinger-Poisson Solver. This release includes some improvements to the intersubband_optical_transitions module. Figure instances are now returned from plotting functions to enable custom alteration and saving of figures. Docstrings for the modules have also been improved for those that explore the codebase using an interactive terminal like ipython. Here are the release notes.
 
-Version 1.1 can be downloaded from https://github.com/sblisesivdin/aestimo/archive/master.zip. Aestimo is GPL licensed software. Any improvements, bug reports or feedback are welcome.
+Version 1.1 can be downloaded from https://github.com/aestimosolver/aestimo/archive/master.zip. Aestimo is GPL licensed software. Any improvements, bug reports or feedback are welcome.
 
 ## Aestimo is on PyPI!
 
@@ -88,7 +88,7 @@ The tutorial is released as an ipython notebook (tutorial5) and can also be foun
 
 Aestimo Team is proud to release the version 1.0 of Aestimo 1D Self-consistent Schrödinger-Poisson Solver. This version includes many bugfixes, new organization of the structure, wurtzite material using, lots of change in intersubband optical transitions module. Dielectric constants are now handled more accurately. Many tutorials are added in the form of an ipython notebooks. Code is heavily modified and stabilized with more than 60 commits. This version is the most feature rich and stable version so ever. For more please visit release notes. Also another aestimo version, which is called “elementary” is released. This version is easy to understand in terms of coding, and therefore it can be used in undergraduate /graduate courses and forking new solvers. There will be no any other release for the “elementary” version.
 
-The version 1.0 and “elementary” can be downloaded from https://github.com/sblisesivdin/aestimo/archive/master.zip Aestimo is GPL licensed software. We are always open to your contributions. Please use it, issue a bug, help to write use a better user's manual or commit to source!
+The version 1.0 and “elementary” can be downloaded from https://github.com/aestimosolver/aestimo/archive/master.zip Aestimo is GPL licensed software. We are always open to your contributions. Please use it, issue a bug, help to write use a better user's manual or commit to source!
 
 ## New Tutorial
 
@@ -102,14 +102,14 @@ Developer Robert Steed uploaded a new tutorial about the latest state of aestimo
 
 Aestimo Team is proud to release the version 0.9 of Aestimo 1D Self-consistent Schrödinger-Poisson Solver. This version includes many bugfixes, speed improvements, cython code additions, rewritten VBMAT-V part to use numpy better, merging conduction and valance band calculations and more. Code is heavily modified and stabilized.
 
-The version 0.9 can be downloaded from https://github.com/sblisesivdin/aestimo/archive/master.zip Aestimo is GPL licensed software. We are always open to your contributions. Please use it, issue a bug, help to write use a better user's manual or commit to source!
+The version 0.9 can be downloaded from https://github.com/aestimosolver/aestimo/archive/master.zip Aestimo is GPL licensed software. We are always open to your contributions. Please use it, issue a bug, help to write use a better user's manual or commit to source!
 
 ## Version 0.8 is released
 
 *2013/07/07 11:35 - Dr. S. Bora Lisesivdin*
 Aestimo Team is proud to release the version 0.8 of Aestimo 1D Self-consistent Schrödinger-Poisson Solver. This version includes many new features, bugfixes and small corrections. The most important feature, which is added to Aestimo recently, is the implementation of strain included valence band calculation with 3×3 k.p model. Also, Numpy version is restructured, input file structure and sample inputs are changed and non-parabolicity of conduction band is implemented (Numpy version only). In addition, database is changed to a more clear-understable structure and exchange interaction potential is implemented (Numpy version only). Logging with timers, some customizations in config and a possibility of looping the simulation over a parameter are also the added to new version. Aestimo can work now with new materials InAs, InP, AlP, GaP and new alloys InGaAs, InGaP, AlInP in addition to GaAs and AlGaAs.
 
-The version 0.8 can be downloaded from https://github.com/sblisesivdin/aestimo/archive/master.zip Aestimo is GPL licensed software. We are always open to your contributions. Please use it, issue a bug, help to write use a better user's manual or commit to source!
+The version 0.8 can be downloaded from https://github.com/aestimosolver/aestimo/archive/master.zip Aestimo is GPL licensed software. We are always open to your contributions. Please use it, issue a bug, help to write use a better user's manual or commit to source!
 
 ## New site for Aestimo
 
