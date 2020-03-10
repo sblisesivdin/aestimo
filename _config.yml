@@ -1,5 +1,6 @@
-o# theme: jekyll-theme-dinky
+# theme: jekyll-theme-dinky
 remote_theme: aestimosolver/just-the-docs
+url: "https://www.aestimosolver.org"
 logo: "/files/aestimosmall.gif"
 # Enable or disable the site search
 # Supports true (default) or false
