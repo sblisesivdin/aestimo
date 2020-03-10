@@ -1,2 +1,18 @@
 # theme: jekyll-theme-dinky
 remote_theme: pmarsceill/just-the-docs
+logo: "/files/aestimosmall.gif"
+# Enable or disable the site search
+# Supports true (default) or false
+search_enabled: true
+
+# Enable support for hyphenated search words:
+search_tokenizer_separator: /[\s/]+/
+
+# Aux links for the upper right navigation
+aux_links:
+  "Aestimo on GitHub":
+    - "https://github.com/aestimosolver/aestimo"
+    
+heading_anchors: true
+# Footer content appears at the bottom of every page's main content
+footer_content: "Copyright &copy; 2012-2020 Aestimo Group. Distributed by an <a href=\"https://github.com/aestimosolver/aestimo/blob/master/COPYING.md\">GPL3 license.</a>"
