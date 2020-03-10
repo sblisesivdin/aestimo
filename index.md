@@ -33,6 +33,11 @@ We will appreciate if any scientific work done using Aestimo v.1.2.0 will contai
 
 # News
 
+**March 2020**
+
+* Get [masters degree](https://www.lrgresearch.org/vacancies) in Advanced Technologies department @ Gazi University with helping the code development of Aestimo! (10 Mar 2020)
+* Project website is now using *just-the-docs* theme. It is more document focused theme. We want to give more importance to documentation in future (10 Mar 2020).
+
 **July 2018**
 
 * [Aestimo 1D version 1.2.1](http://www.aestimosolver.org/releasenotes.html#v121-july-22nd-2018) released. Thanks to Robert Steed. This is a minor release that fixes some issues with using aestimo as a system package in python3 and makes some changes to the intersubband_optical_transitions.py (22 Jul 2018).
@@ -43,6 +48,7 @@ We will appreciate if any scientific work done using Aestimo v.1.2.0 will contai
 
 **April 2017**
 
+* Project website https://www.aestimosolver.org is moved to Github.
 * Today, we moved all our code and issue management from BitBucket to GitHub. You can find the code at github.com/sblisesivdin/aestimo. Now, with this move, we want to open our code to the large user base of GitHub and expect new committers as many as we can find. This move also makes easier for everyone to contribute to aestimo. Not a single line of code is lost, just moved to another place. This is how we try to make this change for everyone as comfortable as possible (04 Apr 2017).
 
 **November 2016**
