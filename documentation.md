@@ -1,4 +1,10 @@
-[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+---
+layout: default
+title: Documentation
+nav_order: 5
+description: "Installation and usage."
+permalink: /documentation.html
+---
 
 # User's Guide
 

@@ -1,4 +1,10 @@
-[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+---
+layout: default
+title: Release Notes
+nav_order: 3
+description: "Release Notes"
+permalink: /releasenotes.html
+---
 
 # Release Notes (Changelog)
 

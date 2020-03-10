@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Index
 nav_order: 1
 description: "Aestimo is a one-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures."
 permalink: /

@@ -1,4 +1,10 @@
-[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+---
+layout: default
+title: About Aestimo 1D
+nav_order: 2
+description: "History and features of Aestimo 1D."
+permalink: /about.html
+---
 
 # What is Aestimo?
 

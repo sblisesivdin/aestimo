@@ -1,4 +1,10 @@
-[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
+---
+layout: default
+title: Contributing to Aestimo 1D
+nav_order: 4
+description: "Authoring and contributing to Aestimo 1D"
+permalink: /contributing.html
+---
 
 # Authors and Contributors
 
@@ -10,20 +16,20 @@ Contributors of Aestimo. Names are listed in alphabetic order. Name, Initials, E
 
 *	Hamza Hebal, HH, ncmagra54-AT-yahoo.fr, University of Djilali Lyabes Sidi Bel Abes, Algeria
 * Robert Steed, RS, robsteed0-AT-gmail.com
- 
+
 ## Version 1.1 
 
 ### Committers 
 
 *	Robert Steed, RS, robsteed0-AT-gmail.com
-  
+
 ## Version 1.0 
 
 ### Committers 
 
 *	Hamza Hebal, HH, ncmagra54-AT-yahoo.fr, University of Djilali Lyabes Sidi Bel Abes, Algeria
 *	Robert Steed, RS, robsteed0-AT-gmail.com
-  
+
 ## Version 0.9 
 
 ### Committers 
