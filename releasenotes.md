@@ -8,6 +8,17 @@ permalink: /releasenotes.html
 
 # Release Notes (Changelog)
 
+### v.1.2.1 (July 22nd, 2018)
+
+This is a minor release that fixes some issues with using aestimo as a system package in python3 and makes some changes to the intersubband_optical_transitions.py. This version will also be available on PyPI for installation via pip.
+
+Changes include:
+
+- intersubband_optical_transitions module now has model handling wavelength dependent dielectric constants - reliability of the results is unproven though.
+- intersubband_optical_transitions module has made some small changes to improve handling of absorbing background dielectric constant - reliability of the results is unproven though.
+- Fixed issues related to using aestimo as a package in python3.6
+- Removing figsize from aestimo and aestimo_eh plots so that it can be configured via matplotlib configuration.
+
 ### v.1.2 (November 6th, 2017)
 
 *	Quaternary alloys (type A_{x}B_{1-x}C_{y}D_{1-y})
