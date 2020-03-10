@@ -33,6 +33,10 @@ We will appreciate if any scientific work done using Aestimo v.1.2.0 will contai
 
 # News
 
+**July 2018**
+
+* [Aestimo 1D version 1.2.1](http://www.aestimosolver.org/releasenotes.html#v121-july-22nd-2018) released. Thanks to Robert Steed. This is a minor release that fixes some issues with using aestimo as a system package in python3 and makes some changes to the intersubband_optical_transitions.py (22 Jul 2018).
+
 **November 2017**
 
 * [Aestimo 1D version 1.2.0](http://www.aestimosolver.org/releasenotes.html#v12-november-6th-2017) released. Thanks to Robert Steed and Hamza Hebal for their efforts to make Aestimo better (06 Nov 2017).
