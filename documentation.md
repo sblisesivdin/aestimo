@@ -6,7 +6,7 @@ description: "Installation and usage."
 permalink: /documentation.html
 ---
 
-# User's Guide
+# Documentation
 
 ```
 ATTENTION: This page is not complete for the latest version. 

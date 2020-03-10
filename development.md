@@ -3,10 +3,10 @@ layout: default
 title: Development
 nav_order: 7
 description: "Development pages"
-permalink: /
+permalink: /development.html
 ---
 
-# Developer's Guide
+# Development Pages
 
 ## Introduction
 

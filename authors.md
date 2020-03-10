@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Contributing to Aestimo 1D
-nav_order: 4
+title: Authors
+nav_order: 3
 description: "Authoring and contributing to Aestimo 1D"
-permalink: /contributing.html
+permalink: /authors.html
 ---
 
 # Authors and Contributors

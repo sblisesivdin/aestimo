@@ -3,7 +3,7 @@ layout: default
 title: Tutorials
 nav_order: 6
 description: "Some tutorials for Aestimo 1D."
-permalink: /
+permalink: /tutorials.html
 ---
 
 # Tutorials
