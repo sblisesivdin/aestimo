@@ -6,8 +6,6 @@ description: "Aestimo is a one-dimensional (1D) self-consistent Schrödinger-Poi
 permalink: /
 ---
 
-[Home](index.md) | [About](about.md) | [Authors](AUTHORS.md) | [Dev's Guide](DEVSGUIDE.md) | [Changelog](CHANGELOG.md) | [User's Guide](USERSGUIDE.md) | [Tutorials](tutorials.md)
-
 ![Image](files/aestimobanner.png)
 
 Aestimo is a one-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures. Aestimo is started as a hobby at the beginning of 2012, and become an usable tool which can be used as a co-tool in an educational and/or scientific work.
