@@ -29,7 +29,7 @@ Please read [documentation](documentation.md) before downloading or visit [relea
 ## Cite Information
 We will appreciate if any scientific work done using Aestimo v.1.2.0 will contain an acknowledgment and the following reference:
 
-* **R. Steed, H. Hebal, and S. B. Lisesivdin. (2017, November 6). sblisesivdin/aestimo: Version v.1.2 (Version v.1.2.0). Zenodo. http://doi.org/10.5281/zenodo.1042657**
+* **R. Steed, H. Hebal, and S. B. Lisesivdin. (2018, July 22). sblisesivdin/aestimo: Version 1.2.1 (Version v.1.2.1). Zenodo. http://doi.org/10.5281/zenodo.1319000**
 
 # News
 
