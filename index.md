@@ -20,21 +20,22 @@ Please,
 
 # Latest Aestimo
 
-Latest stable version of Aestimo is v.1.2.1 (July 22nd, 2018).
+Latest stable version of Aestimo is v.2.0 (March 28th, 2018).
 
-<a href="https://github.com/aestimosolver/aestimo/releases/download/v.1.2.1/aestimo-1.2.1.zip"><img src="files/download.png"/></a>
+<a href="https://github.com/aestimosolver/aestimo/releases/download/v2.0/aestimo-v.2.0-master.zip"><img src="files/download.png"/></a>
 
 Please read [documentation](documentation.md) before downloading or visit [release notes](releasenotes.md) page for more information.
 
 ## Cite Information
-We will appreciate if any scientific work done using Aestimo v.1.2.0 will contain an acknowledgment and the following reference:
+We will appreciate if any scientific work done using Aestimo v.2.0 will contain an acknowledgment and the following reference:
 
-* **R. Steed, H. Hebal, and S. B. Lisesivdin. (2018, July 22). sblisesivdin/aestimo: Version 1.2.1 (Version v.1.2.1). Zenodo. http://doi.org/10.5281/zenodo.1319000**
+* **R. Steed, H. Hebal, and S. B. Lisesivdin. (2020, March 28). sblisesivdin/aestimo: Version 2.0 (Version v2.0). Zenodo. http://doi.org/10.5281/zenodo.3732022**
 
 # News
 
 **March 2020**
 
+* [Aestimo 1D version 2.0](https://www.aestimosolver.org/releasenotes.html#v20-march-28-2020) released. This is a major release nearly after 2 years. We would like to thank Hamza Hebal for his efforts and contributions. There are many new features added in this release. Please refer [Release Notes](https://www.aestimosolver.org/releasenotes.html#v20-march-28-2020) pages for details of these contributions.
 * Get [masters degree](https://www.lrgresearch.org/vacancies) in Advanced Technologies department @ Gazi University with helping the code development of Aestimo! (10 Mar 2020)
 * Project website is now using *just-the-docs* theme. It is more document focused theme. We want to give more importance to documentation in future (10 Mar 2020).
 
