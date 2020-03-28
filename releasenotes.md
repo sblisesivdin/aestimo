@@ -8,6 +8,25 @@ permalink: /releasenotes.html
 
 # Release Notes (Changelog)
 
+### v.2.0 (March 28, 2020)
+This is a major release nearly after 2 years. We would like to thank Hamza Hebal for his efforts and contributions. There are many new features added in this release:
+- New DD solver base on Gummel and newton map.
+- Updating structures files with new options and settings.
+- Updating database with variables for new DD solver.
+- Adding the stern damping method as an option.
+- Adding a contact setting as a boundary for the Poisson equation.
+- Improve piezo- and spontaneous- charges handling independently of wb and bw variables.
+- Improve quantum well counting in the structure list.
+- Including the option of the free quantum region.
+- Correction in the position of interface charges for piezo option.
+- The Quantum density of carrier is working now, according to the Modified QDD model.
+- Adding new structure files.
+- Setting for predictor-corrector method.-Setting for QW calculation limits around the well region.
+- Organizing existing functions for Schrödinger and strain setting in separate functions.
+- Improved method for locating energy levels for each QW.
+- Quaternary alloys (type B_{x}C_{y}D_{1-x-y}A).
+- Version 2.0 works with Python 3.7.6 and previous python3 versions.
+
 ### v.1.2.1 (July 22nd, 2018)
 
 This is a minor release that fixes some issues with using aestimo as a system package in python3 and makes some changes to the intersubband_optical_transitions.py. This version will also be available on PyPI for installation via pip.
