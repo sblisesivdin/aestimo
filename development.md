@@ -14,16 +14,12 @@ Welcome developers. Before beginning technical subjects, it will be better to ta
 
 Aestimo is aimed to be both educational and research tool. For educational purposes, it must be easy to understand. For research, it must have some point of computational correctness and sensitivity.
 
-If you are looking for a motto for project (we do not have any) or a sentence that explain aestimo, it will be the “The less you have, the more creative you are”
-
-Therefore, we must try the best with minimum code addition. With python, it is impossible to do anything with big add-ons like numpy, pylab,…etc… but this is something else. The aestimo code itself must be minimalist and easy to read. For example: We can use input files in two ways:
+The aestimo code itself must be minimalist and easy to read. For example: We can use input files in two ways:
 
 * With writing a huge parser, which parses input file line by line and make it usable
 * Or make input file as python file, so you can only import to use.
 
 So, our choice must be the latter one.
-
-Not everybody can code in object-oriented way, so start with the known way :) We can discuss it in maillist. Use comments in code as many as possible. Learn to use git. Push your changes and make us review it. Before begin
 
 Before beginning to code, there some references that you may interested in:
 
@@ -37,39 +33,29 @@ Some thesis and dissertations about the subject:
 * Jeffery Wayne Allen, “A Simulation Tool Suite for the Modelling and Optimization of Multiple Quantum Well Structures” The University of Texas at Arlington, 2005.
 
 You can ask to Dr. Lisesivdin if you have problems with reaching to these references.
-## Todo / Tasks
 
-*Legend: 1:High priority, 2: Normal priority, 3: Low priority*
+## How to contribute
 
-* Implement quantum region(s): (Priority:2) (Assigned to na) (Deadline: na)
-* Current characteristics with a simple mobility model: (Priority:3) (Assigned to na) (Deadline: na)
-* Schottky contacts: (Priority:2) (Assigned to na) (Deadline: na)
-* More complex boundary conditions: (Priority:2) (Assigned to na) (Deadline: na)
-* C/V characteristics: (Priority:3) (Assigned to na) (Deadline: na)
-* Support for piezoelectric and pyroelectric charges (for wurtzite structures): (Priority:1) (Assigned to na) (Deadline: na)
-* Many input files can be inserted to config.py file like a queue: (Priority:3) (Assigned to na) (Deadline: na)
-* Preliminary User documentation: (Priority:2) (Assigned to Dr. Koziol) (Deadline: December 2013)
-* Implementing a better band structure calculation method instead of using band offsets (Priority:1) (Assigned to na) (Deadline: na)
+Discussion of the development takes place on [development emaillist](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!forum/aestimo-devel). We always welcome new developers. New developers can be added to emaillist after their first successful commits on our Github repository.
 
-## Recently Completed Tasks
+### Usage of Github
 
-* Clean-up code: (Priority:1) (Assigned to Dr. Steed) (Deadline: April 23th, 2013)
-* External electric field: (Priority:1) (Assigned to Dr. Steed) (Deadline: April 23th, 2013)
-* Implement holes: (Priority:1) (Assigned to Hamza Hebal) (Deadline: version 0.8)
-* Non-parabolicity: (Priority:1) (Assigned to Dr. Steed) (Deadline: version 0.8)
-* More materials: (Priority:1) (Assigned to Dr. Lisesivdin (Thanks to Dr. Beyza Sarikavak-Lisesivdin for material parameters) (Deadline: version 0.8)
+All the changes and feature addings on the source code takes place on our [Github Repository](https://github.com/aestimosolver/aestimo).
 
-## Release Plan
+You need to learn how to use [Git](https://git-scm.com/). Or you can use [Github website](https://github.com/aestimosolver/aestimo) for small changes and [Github Desktop](https://desktop.github.com) for easy usage
 
-Before become a stable release, after completing every 1-3 tasks, new version can be released like 0.7, 0.8… With a agreed discussion on that we have a preliminary stable release, we will open the code to the public, and we can proceed with a new and logical release plan like:
+#### Register and start developing
 
-```
-First freeze time : Every 1 March 
-First release time : Every 31 March 
-Second freeze time : Every 1 September 
-Second release time : Every 30 September
-```
+Related information will be added later.
 
-Freeze times are the development freeze times. One month before every release, we must freeze the development as its current state. In that month, reviews of codes, testing will be completed. If the total development is not large or negligible, it will be a minor release. Assignments
+#### Making important changes or feature addings
 
-For a small project with a small group, it may be better use assignments. Please inform when you interested in one or more than one of the tasks written above. So, we can prevent to work more than one person working on same task. Assignments will have deadlines.
+Related information will be added later.
+
+#### Small Changes, minor addings
+
+Related information will be added later.
+
+#### Other Information 
+
+Related information will be added later.
