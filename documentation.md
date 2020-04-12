@@ -77,16 +77,10 @@ First of all, user must prepare or use an input file. This file must specified i
 ./aestimo.py
 ```
 
-or
-
-```
-./aestimo_numpy.py
-```
-
 for conduction band calculations. For valence band calculations, aestimo uses a 3×3 k.p model which includes strain. After editing config.py for input file, execute the command
 
 ```
-./aestimo_numpy_eh.py
+./aestimo_eh.py
 ```
 
 For simulating a design several times while varying a parameter over a range of values, edit the main_iterating.py file for your needs, and then execute it as
@@ -153,29 +147,15 @@ Will be here.
 ### General Settings
 Will be here.
 
-### Regional Settings
-Will be here.
-
-## Todo/Wish List
-
-Since this is a small project, there are many things to do. If you can not do any desired calculation with aestimo please look at this todo first. Required features may not be implemented in aestimo for now. And troubleshooting below is also a pathfinder for your calculations.
-* Implement quantum region(s),
-* Current characteristics with a simple mobility model,
-* Schottky contacts,
-* More complex boundary conditions,
-* C/V characteristics,
-* Support for piezoelectric and pyroelectric charges (wurtzite structures),
-* Many input files can be inserted to config.py file like a queue.
-
 ## Troubleshooting
 
-* *Program is not converging!*: Aestimo is not a mature tool. Therefore it is selective in calculations. Convergence problem can be raised from mainly two reasons: Gridfactor is not small enough and structure is highly doped. Please use smaller gridfactor (<1nm) and low doping concentrations (<1e17 cm^-3).
+* *Program is not converging!*: Convergence problem can be raised from mainly two reasons: Gridfactor is not small enough and structure is highly doped. Please use smaller gridfactor (<1nm) and low doping concentrations (<1e17 cm^-3).
 
 ## Copyright information
 
 Aestimo 1D Schrodinger-Poisson Solver
-Version v.0.6 - v.1.2
-Copyright (C) 2013-2017 Sefer Bora Lisesivdin and Aestimo group
+Version v.0.6 - v.2.0
+Copyright (C) 2013-2020 Aestimo group
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -183,4 +163,4 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. http://www.gnu.org/copyleft/gpl.txt .
 
-For the list of contributors, see [AUTHORS](AUTHORS.md).
+For the list of contributors, see [AUTHORS](authors.md).
