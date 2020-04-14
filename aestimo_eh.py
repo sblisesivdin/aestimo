@@ -1298,7 +1298,7 @@ class StructureFrom(Structure):
         self.mat_crys_strc = inputfile.mat_type
         # Loading material list
         self.material = inputfile.material
-
+        self.inputfilename=inputfile.inputfilename
         totallayer = alen(self.material)
         if not (config.messagesoff):
             logger.info("Total layer number: %s", totallayer)
@@ -3861,6 +3861,9 @@ def Poisson_Schrodinger_DD_test_2(result, model):
     CAubar = Rbar / ns ** 3  # [m^6 s^{-1}]
     idata.Cn = Cn0 / CAubar
     idata.Cp = Cp0 / CAubar
+    if config.use_cython :
+        from aestimo_dd_lib import DDGgummelmap_cython,DDNnewtonmap_cython
+        print("use_cython option is activated")
     ###############################################################
     if vmax == 0:
         print("Va_max=0")
@@ -3947,27 +3950,32 @@ def Poisson_Schrodinger_DD_test_2(result, model):
             ptoll = 1e-10
             pmaxit = 30
             verbose = 0
-
-            [odata, it, res] = DDGgummelmap(
-                n_max,
-                xin,
-                idata,
-                odata,
-                toll,
-                maxit,
-                ptoll,
-                pmaxit,
-                verbose,
-                ni,
-                fi_e,
-                fi_h,
-                model,
-                Vt,
-            )
-
-            [odata, it, res] = DDNnewtonmap(
-                ni, fi_e, fi_h, xin, odata, toll, maxit, verbose, model, Vt
-            )
+            if config.use_cython :
+                [odata, it, res] = DDGgummelmap_cython(idata,odata,model,xin,ni,fi_e,fi_h,toll,Vt,ptoll,pmaxit,n_max,verbose,maxit)
+            else:                
+                [odata, it, res] = DDGgummelmap(
+                    n_max,
+                    xin,
+                    idata,
+                    odata,
+                    toll,
+                    maxit,
+                    ptoll,
+                    pmaxit,
+                    verbose,
+                    ni,
+                    fi_e,
+                    fi_h,
+                    model,
+                    Vt,
+                )
+            
+            if config.use_cython :
+                [odata, it, res] = DDNnewtonmap_cython(odata,model,ni,fi_e,fi_h,xin,toll,Vt,maxit,verbose)
+            else:                
+                [odata, it, res] = DDNnewtonmap(
+                    ni, fi_e, fi_h, xin, odata, toll, maxit, verbose, model, Vt
+                )
 
             n_[vindex, :] = odata.n
             p_[vindex, :] = odata.p
@@ -4041,10 +4049,8 @@ def Poisson_Schrodinger_DD_test_2(result, model):
             ro_result[i] = -q * (n_[vindex, i] - p_[vindex, i] - ns * dop[i])
             el_field1_result[i] = -(V_[vindex, i + 1] - V_[vindex, i]) / (dx)
             el_field2_result[i] = -(V_[vindex, i + 1] - V_[vindex, i - 1]) / (2 * dx)
-            #Efn_result[i] = Ec_result[i] + Vt * log(n_[vindex, i] / Nc[i])
-            #Efp_result[i] = Ev_result[i] - Vt * log(p_[vindex, i] / Nv[i])
-        # Efn_result=Fn_[vindex,:]
-        # Efp_result=Fp_[vindex,:]
+            Efn_result[i] = Ei_result[i] + Vt * log(n_[vindex, i]/ni[i]+1)
+            Efp_result[i] = Ei_result[i] - Vt * log(p_[vindex, i]/ni[i]+1)
         Ec_result[0] = Ec_result[1]
         Ec_result[n_max - 1] = Ec_result[n_max - 2]
         Ev_result[0] = Ev_result[1]
@@ -4070,7 +4076,7 @@ def Poisson_Schrodinger_DD_test_2(result, model):
         Va_t = vvect
         fitot = fi_h - Vt * q * odata.V
         fitotc = fi_e - Vt * q * odata.V
-        if model.N_wells_virtual - 2 != 0 and 1 == 2:
+        if model.N_wells_virtual - 2 != 0 and config.quantum_effect:
             (
                 idata.E_statec_general,
                 idata.E_state_general,
@@ -4159,7 +4165,8 @@ def Poisson_Schrodinger_DD_test_2(result, model):
 
 def save_and_plot2(result, model):
     xaxis = result.xaxis
-    output_directory = config.output_directory + "_eh"
+    output_directory = "output_"+model.inputfilename + "_eh"
+    #output_directory = config.output_directory + "_eh"
     output_directory = os.path.join(examplesdir, output_directory)
 
     if not os.path.isdir(output_directory):
@@ -4176,7 +4183,7 @@ def save_and_plot2(result, model):
     # saveoutput("av_curr.dat",(result.Va_t*Vt,result.av_curr*1e-4))
     for jjj in range(result.Total_Steps - 1, result.Total_Steps):
         vtt = result.Va_t[jjj]
-        vt = vtt * Vt
+        vt = vtt
         if config.Drift_Diffusion_out:
             if config.sigma_out:
                 saveoutput("sigma_eh_%.2f.dat" % vt, (xaxis, result.ro_result))
@@ -4294,7 +4301,7 @@ def save_and_plot2(result, model):
 
         fig2 = pl.figure(figsize=(10, 8))
         pl.suptitle(
-            "1D Drift Diffusion Model for pn Diodes Results - at Applied Bias (%.2f)"
+            "1D Drift Diffusion Model Results - at Applied Bias (%.2f)"
             % vt,
             fontsize=12,
         )
@@ -4345,7 +4352,7 @@ def save_and_plot2(result, model):
 
         fig3 = pl.figure(figsize=(10, 8))
         pl.suptitle(
-            "1D Drift Diffusion Model for pn Diodes Results - at Applied Bias (%.2f)"
+            "1D Drift Diffusion Model Results - at Applied Bias (%.2f)"
             % vt,
             fontsize=12,
         )
@@ -4408,9 +4415,10 @@ def save_and_plot2(result, model):
 
 
 def save_and_plot(result, model):
+
     xaxis = result.xaxis
-    
-    output_directory = config.output_directory + "_eh"
+    output_directory = "output_"+model.inputfilename + "_eh"
+    #output_directory = config.output_directory + "_eh"
     output_directory = os.path.join(examplesdir, output_directory)
     
     if not os.path.isdir(output_directory):
@@ -4423,15 +4431,15 @@ def save_and_plot(result, model):
         )
 
     if config.sigma_out:
-        saveoutput("sigma_eh.dat", (xaxis, result.ro_result))
+        saveoutput("sigma_eh_equi_cond.dat", (xaxis, result.ro_result))
     if config.electricfield_out:
         saveoutput(
-            "efield_eh.dat", (xaxis, result.el_field1_result, result.el_field2_result)
+            "efield_eh_equi_cond.dat", (xaxis, result.el_field1_result, result.el_field2_result)
         )
     if config.potential_out:
-        saveoutput("potn_eh.dat", (xaxis * 1e2, result.fitotc / q, result.fitot / q))
+        saveoutput("potn_eh_equi_cond.dat", (xaxis * 1e2, result.fitotc / q, result.fitot / q))
         saveoutput(
-            "np_data0.dat",
+            "np_data0_equi_cond.dat",
             (xaxis * 1e2, result.nf_result * 1e-6, result.pf_result * 1e-6),
         )
     if config.states_out:
@@ -4447,10 +4455,10 @@ def save_and_plot(result, model):
             )
             # header = " ".join([col.ljust(12) for col in ("State No.","Energy (meV)","N (m**-2)","Subband m* (m_e)")])
             header = "State No.    Energy (meV) N (m**-2)    Subband m* (kg)"
-            saveoutput("states_h_QWR%d.dat" % j, columns, header=header)
+            saveoutput("states_h_QWR%d_equi_cond.dat" % j, columns, header=header)
             if config.probability_out:
                 saveoutput(
-                    "wavefunctions_h_QWR%d.dat" % j,
+                    "wavefunctions_h_QWR%d_equi_cond.dat" % j,
                     (xaxis, result.wfh_general[j].transpose()),
                 )
     if config.states_out:
@@ -4466,17 +4474,17 @@ def save_and_plot(result, model):
             )
             # header = " ".join([col.ljust(12) for col in ("State No.","Energy (meV)","N (m**-2)","Subband m* (m_e)")])
             header = "State No.    Energy (meV) N (m**-2)    Subband m* (kg)"
-            saveoutput("states_e_QWR%d.dat" % j, columns, header=header)
+            saveoutput("states_e_QWR%d_equi_cond.dat" % j, columns, header=header)
             if config.probability_out:
                 saveoutput(
-                    "wavefunctions_e_QWR%d.dat" % j,
+                    "wavefunctions_e_QWR%d_equi_cond.dat" % j,
                     (xaxis, result.wfe_general[j].transpose()),
                 )
     # Resultviewer
     if config.resultviewer:
         span = np.ones(100000000)
         fig1 = pl.figure(figsize=(10, 8))
-        pl.suptitle("Aestimo Results")
+        pl.suptitle("Aestimo Results - at Equilibrium Condition")
         pl.subplot(1, 1, 1)
         pl.plot(xaxis, result.fitot * J2meV, "k", xaxis, result.fitotc * J2meV, "k")
         for j in range(1, result.N_wells_virtual - 1):
@@ -4512,7 +4520,7 @@ def save_and_plot(result, model):
 
         fig2 = pl.figure(figsize=(10, 8))
         pl.suptitle(
-            "1D Drift Diffusion Model for pn Diodes Results - at Equilibrium Condition ",
+            "Aestimo Results - at Equilibrium Condition ",
             fontsize=12,
         )
         pl.subplots_adjust(hspace=0.4, wspace=0.4)
@@ -4621,6 +4629,7 @@ if __name__ == "__main__":
 
     # Import from config file
     inputfile = __import__(options.inputfile)
+    
     if not (config.messagesoff):
         logger.info("inputfile is %s", options.inputfile)
     run_aestimo(inputfile)

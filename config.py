@@ -50,12 +50,12 @@ meV2J=1e-3*q #meV to Joules
 #inputfilename = "sample_qw_barrierdope_p_InGaAsP"
 #inputfilename = "sample_qw_barrierdope_p_AlGaInN"
 #inputfilename = "sample_qw_barrierdope_p_AlGaInN_2"
-#inputfilename = "sample_pn"
-inputfilename = "sample_2qw_barrierdope_ingaas"
+inputfilename = "sample_pn"
+#inputfilename = "sample_2qw_barrierdope_ingaas"
 # Calculation
 # -----------
 # Aestimo
-use_cython = False #provides a speed up for aestimo
+use_cython = True #provides a speed up for aestimo
 # Shooting method parameters for Schrödinger Equation solution
 delta_E = 0.5*meV2J #Energy step (Joules) for initial search. Initial delta_E is 1 meV. 
 d_E = 1e-5*meV2J #Energy step (Joules) within Newton-Raphson method when improving the precision of the energy of a found level.

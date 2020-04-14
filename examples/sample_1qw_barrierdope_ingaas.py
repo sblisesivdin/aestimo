@@ -24,8 +24,8 @@ computation_scheme = 2
 
 # QUANTUM
 # Total subband number to be calculated for electrons
-subnumber_h = 1
-subnumber_e = 1
+subnumber_h = 3
+subnumber_e = 3
 # APPLIED ELECTRIC FIELD
 Fapplied = 0.#0.41348e8 (V/m)
 vmax= 1.79
@@ -47,12 +47,12 @@ mat_type='Zincblende'
 # Layer 0 |      250.0     |   Si     |      0         |     1e16      |     n       |
 # Layer 1 |      250.0     |   Si     |      0         |     1e16      |     p       |
 # To input this list in Gallium, we use lists N:
-material =[[ 250.0, 'AlGaAs', 0.3, 0.0, 1e17, 'p','b'],
+material =[[ 250.0, 'AlGaAs', 0.3, 0.0, 0.8e17, 'p','b'],
            [ 50.0, 'AlGaAs', 0.3, 0.0, 0.0, 'n','b'],
            [ 15.0, 'GaAs', 0.3, 0.0, 0.0,'n','w'],
            [ 5.0, 'AlGaAs', 0.3, 0.0, 0.0,'n','b'],
-           [ 20.0, 'AlGaAs', 0.3, 0.0, 1e18,'n','b'],           
-           [ 15.0, 'GaAs', 0.3, 0.0, 1e18, 'n','b']]
+           [ 20.0, 'AlGaAs', 0.3, 0.0, 0.8e18,'n','b'],           
+           [ 15.0, 'GaAs', 0.3, 0.0, 0.8e18, 'n','b']]
 
 
 #----------------------------------------
@@ -100,24 +100,11 @@ surface=np.zeros(2)
 surface[0]=  0.0
 surface[1]=  0.6
 #----------------------------------------
+inputfilename = "sample_qw_barrierdope_ingaas"
+from os import path
 if __name__ == "__main__": #this code allows you to run the input file directly
     input_obj = vars()
+    import sys
+    sys.path.append(path.join(path.dirname(__file__), '..'))
     import aestimo_eh
     aestimo_eh.run_aestimo(input_obj)
-
-"""
-        
-        A	= sp.spdiags([a, b, c],np.array([-1,0,1]),n_max,n_max).todense()
-        A=np.delete(A, [0,n_max-1], 0)
-        A=np.delete(A, [0,n_max-1], 1)
-        R=np.delete(f, [0,n_max-1], 0)        
-        cc= np.linalg.solve(A, R)
-                
-        tmp=np.zeros(n_max)
-        tmp[1:n_max-1]=cc
-        tmp[0]=fi_out[0]
-        tmp[n_max-1]=fi_out[n_max-1]
-        
-        delta=tmp-fi_out
-        fi_out=tmp
-"""

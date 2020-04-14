@@ -79,7 +79,11 @@ Quantum_Regions_boundary=np.zeros((2,2))
 #----------------------------------------
 surface=np.zeros(2)
 #----------------------------------------
+inputfilename = "sample_mqw_barrierdope_p_ingan"
+from os import path
 if __name__ == "__main__": #this code allows you to run the input file directly
     input_obj = vars()
+    import sys
+    sys.path.append(path.join(path.dirname(__file__), '..'))
     import aestimo_eh
     aestimo_eh.run_aestimo(input_obj)
