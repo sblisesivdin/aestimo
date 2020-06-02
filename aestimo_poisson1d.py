@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
  Aestimo 1D Schrodinger-Poisson Solver
  Copyright (C) 2013-2020 Aestimo Group
@@ -27,7 +28,11 @@ Computational electronics : semiclassical and quantum device modeling and simula
 import numpy as np
 import matplotlib.pyplot as pl
 from math import exp, log, sqrt
-import config
+
+if __package__:  # explicit relative imports for using aestimo as a package (in python3)
+    from . import config
+else:
+    import config
 
 # Defining constants and material parameters
 q = 1.602176e-19  # C
@@ -102,18 +107,7 @@ def Poisson_equi2(
         fi_stat = fi_out
     else:
         n, p, fi_non, EF = equi_np_fi3(
-            fi_stat,
-            n,
-            p,
-            fitotc,
-            fitot,
-            Nc,
-            Nv,
-            fi_e,
-            fi_h,
-            iteration,
             fi_out,
-            Vt,
             wfh_general,
             wfe_general,
             model,
@@ -121,8 +115,6 @@ def Poisson_equi2(
             E_statec_general,
             meff_state_general,
             meff_statec_general,
-            dop,
-            Ppz_Psp,
             n_max,
             ni,
         )
@@ -182,18 +174,7 @@ def Poisson_equi2(
                 p = np.exp(-fi_out)
             else:
                 n, p, fi_non, EF = equi_np_fi3(
-                    fi_stat,
-                    n,
-                    p,
-                    fitotc,
-                    fitot,
-                    Nc,
-                    Nv,
-                    fi_e,
-                    fi_h,
-                    iteration,
                     fi_out,
-                    Vt,
                     wfh_general,
                     wfe_general,
                     model,
@@ -201,8 +182,6 @@ def Poisson_equi2(
                     E_statec_general,
                     meff_state_general,
                     meff_statec_general,
-                    dop,
-                    Ppz_Psp,
                     n_max,
                     ni,
                 )
@@ -268,18 +247,7 @@ def Poisson_equi_non_2(
         n = np.zeros(n_max)
         p = np.zeros(n_max)
         n, p, fi_non, EF = equi_np_fi3(
-            fi_stat,
-            n,
-            p,
-            fitotc,
-            fitot,
-            Nc,
-            Nv,
-            fi_e,
-            fi_h,
-            iteration,
             fi_out,
-            Vt,
             wfh_general,
             wfe_general,
             model,
@@ -287,8 +255,6 @@ def Poisson_equi_non_2(
             E_statec_general,
             meff_state_general,
             meff_statec_general,
-            dop,
-            Ppz_Psp,
             n_max,
             ni,
         )
@@ -367,18 +333,7 @@ def Poisson_equi_non_2(
                 n = np.zeros(n_max)
                 p = np.zeros(n_max)
                 n, p, fi_non, EF = equi_np_fi3(
-                    fi_stat,
-                    n,
-                    p,
-                    fitotc,
-                    fitot,
-                    Nc,
-                    Nv,
-                    fi_e,
-                    fi_h,
-                    iteration,
                     fi_out,
-                    Vt,
                     wfh_general,
                     wfe_general,
                     model,
@@ -386,8 +341,6 @@ def Poisson_equi_non_2(
                     E_statec_general,
                     meff_state_general,
                     meff_statec_general,
-                    dop,
-                    Ppz_Psp,
                     n_max,
                     ni,
                 )
@@ -762,18 +715,7 @@ def equi_np_fi4(
 
 
 def equi_np_fi3(
-    fi_stat,
-    n,
-    p,
-    fitotc,
-    fitot,
-    Nc,
-    Nv,
-    fi_e,
-    fi_h,
-    iteration,
     fi_old,
-    Vt,
     wfh_general,
     wfe_general,
     model,
@@ -781,39 +723,28 @@ def equi_np_fi3(
     E_statec_general,
     meff_state_general,
     meff_statec_general,
-    dop,
-    Ppz_Psp,
     n_max,
     ni,
 ):  # use
-    EF = 0.0
-    Efn = np.zeros(n_max)
-    Efp = np.zeros(n_max)
-
     n = np.exp(fi_old)
     p = np.exp(-fi_old)
-    """    
-    for i1 in range(0,n_max):
-        if (EF*meV2J-(fi_e[i1]-Vt*q*fi_old[i1])>-3*kb*T  ):
-            n[i1]=Nc[i1]*fd3((EF*meV2J-(fi_e[i1]-Vt*q*fi_old[i1]))/(kb*T))/ni[i1]
-            p[i1]=Nv[i1]*fd3(((fi_h[i1]-Vt*q*fi_old[i1])-EF*meV2J)/(kb*T))/ni[i1]       
-    """
-    fi_stat = Efn = Efp
+    fi_stat = np.zeros(n_max)
     Delta_fi = np.zeros(n_max)
+    if not (config.predic_correc):
+        fi_stat = fi_old
     for k in range(1, model.N_wells_virtual - 1):
         I1, I2, I11, I22 = amort_wave(k, model.Well_boundary, n_max)
         n[I1:I2] = 0.0
         p[I1:I2] = 0.0
-        if not (config.predic_correc):
-            fi_stat = fi_old
         for i in range(I1, I2):
             Delta_fi[i] = -Vt * q * fi_stat[i] - (-Vt * q * fi_old[i])
             for j in range(0, model.subnumber_e, 1):
+                #print("E_statec_general=",(E_statec_general[k, j] - Delta_fi[i] * J2meV))
                 n[i] += (
                     (
                         fd2(
                             E_statec_general[k, j] - Delta_fi[i] * J2meV,
-                            Efn[i] * q * J2meV,
+                            0.0,
                             model,
                         )
                         * meff_statec_general[k, j]
@@ -827,7 +758,7 @@ def equi_np_fi3(
                     (
                         fd1(
                             E_state_general[k, jj] - Delta_fi[i] * J2meV,
-                            Efp[i] * q * J2meV,
+                            0.0,
                             model,
                         )
                         * meff_state_general[k, jj]
@@ -836,7 +767,7 @@ def equi_np_fi3(
                     * (wfh_general[k, jj, i - I1]) ** 2
                     / (ni[i] * model.dx)
                 )
-    return n, p, fi_old, EF
+    return n, p, fi_old, 0.0
 
 
 def Ber(x):
@@ -1846,18 +1777,7 @@ def Poisson_non_equi2(
     delta_acc = 1.0e-4
     if model.N_wells_virtual - 2 != 0 and 1 == 2:
         n, p, fi_non, EF = equi_np_fi3(
-            fi_stat,
-            n,
-            p,
-            fitotc,
-            fitot,
-            Nc,
-            Nv,
-            fi_e,
-            fi_h,
-            iteration,
             fi_out,
-            Vt,
             wfh_general,
             wfe_general,
             model,
@@ -1865,8 +1785,6 @@ def Poisson_non_equi2(
             E_statec_general,
             meff_state_general,
             meff_statec_general,
-            dop,
-            Ppz_Psp,
             n_max,
             ni,
         )
@@ -1916,18 +1834,7 @@ def Poisson_non_equi2(
         """"""
         if model.N_wells_virtual - 2 != 0 and 1 == 2:
             n, p, fi_non, EF = equi_np_fi3(
-                fi_stat,
-                n,
-                p,
-                fitotc,
-                fitot,
-                Nc,
-                Nv,
-                fi_e,
-                fi_h,
-                iteration,
                 fi_out,
-                Vt,
                 wfh_general,
                 wfe_general,
                 model,
@@ -1935,8 +1842,6 @@ def Poisson_non_equi2(
                 E_statec_general,
                 meff_state_general,
                 meff_statec_general,
-                dop,
-                Ppz_Psp,
                 n_max,
                 ni,
             )
