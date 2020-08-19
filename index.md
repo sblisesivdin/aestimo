@@ -20,7 +20,7 @@ Please,
 
 # Latest Aestimo
 
-Latest stable version of Aestimo is v.2.0 (March 28th, 2018).
+Latest stable version of Aestimo is v.2.0 (March 28th, 2020).
 
 <a href="https://github.com/aestimosolver/aestimo/releases/download/v2.0/aestimo-v.2.0-master.zip"><img src="files/download.png"/></a>
 
