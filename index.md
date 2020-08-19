@@ -36,7 +36,7 @@ We will appreciate if any scientific work done using Aestimo v.2.0 will contain 
 **March 2020**
 
 * [Aestimo 1D version 2.0](https://www.aestimosolver.org/releasenotes.html#v20-march-28-2020) released. This is a major release nearly after 2 years. We would like to thank Hamza Hebal for his efforts and contributions. There are many new features added in this release. Please refer [Release Notes](https://www.aestimosolver.org/releasenotes.html#v20-march-28-2020) pages for details of these contributions.
-* Get [masters degree](https://www.lrgresearch.org/vacancies) in Advanced Technologies department @ Gazi University with helping the code development of Aestimo! (10 Mar 2020)
+* Get [masters degree](https://www.lrgresearch.org/vacancies) in **Gazi University Physics department** with helping the code development of Aestimo! (10 Mar 2020)
 * Project website is now using *just-the-docs* theme. It is more document focused theme. We want to give more importance to documentation in future (10 Mar 2020).
 
 **July 2018**
