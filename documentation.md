@@ -43,7 +43,7 @@ The software is released under the GPL license, which means that everyone is fre
 
 ## Download and Installation
 
-The latest version of the program is available in zipped form from the website: https://bitbucket.org/sblisesivdin/aestimo/.
+The latest version of the program is available in zipped form from the website: https://github.com/aestimosolver/aestimo.
 
 ### Prerequisites
 
