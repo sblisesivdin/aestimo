@@ -10,7 +10,7 @@ permalink: /
 
 Aestimo is a one-dimensional (1D) self-consistent Schrödinger-Poisson solver for semiconductor heterostructures. Aestimo is started as a hobby at the beginning of 2012, and become an usable tool which can be used as a co-tool in an educational and/or scientific work.
 
-Aestimo is a [GPL](http://www.gnu.org/copyleft/gpl.txt) software, written by many [developers](authors.md). The code is hosted on [Github](https://github.com/aestimosolver/aestimo).
+Aestimo is a [GPL](http://www.gnu.org/copyleft/gpl.txt) software, written by a team of [developers](authors.md). The code is hosted on [Github](https://github.com/aestimosolver/aestimo).
 
 Please,
 * Report bugs or [browse opened issues](https://github.com/aestimosolver/aestimo/issues).
@@ -27,11 +27,15 @@ Latest stable version of Aestimo is v.2.0 (March 28th, 2020).
 Please read [documentation](documentation.md) before downloading or visit [release notes](releasenotes.md) page for more information.
 
 ## Cite Information
-We will appreciate if any scientific work done using Aestimo v.2.0 will contain an acknowledgment and the following reference:
+We will appreciate if any scientific work done using Aestimo 1D will contain an acknowledgment and the following reference:
 
-* **R. Steed, H. Hebal, and S. B. Lisesivdin. (2020, March 28). sblisesivdin/aestimo: Version 2.0 (Version v2.0). Zenodo. http://doi.org/10.5281/zenodo.3732022**
+* **H. Hebal, Z. Koziol, S.B. Lisesivdin, and R. Steed "General-purpose open-source 1D self-consistent Schrödinger-Poisson Solver: Aestimo 1D" *Comput. Mater. Sci.* 186, 110015 (2021).**
 
 # News
+
+**September 2020**
+
+* Our reference paper “[General-purpose open-source 1D self-consistent Schrödinger-Poisson Solver: Aestimo 1D](https://doi.org/10.1016/j.commatsci.2020.110015)” which gives  a general overview of the Aestimo 1D has been published online!
 
 **March 2020**
 
