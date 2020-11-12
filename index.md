@@ -35,7 +35,7 @@ We will appreciate if any scientific work done using Aestimo 1D will contain an 
 
 **November 2020**
 
-* Old aestimo_elementary branch is now moved to its own new repository and it is renamed as Aestimo EDU. With its simple and %100 pure Python code structure, it is very suitable to be used in education purposes. Code base can be found at https://github.com/aestimosolver/aestimo-edu and the latest code zip packege can be downloaded at https://github.com/aestimosolver/aestimo-edu/archive/main.zip
+* Old aestimo_elementary branch is now moved to its own new repository and it is renamed as Aestimo EDU. With its simple and %100 pure Python code structure, it is very suitable to be used in education purposes. Code base can be found at [https://github.com/aestimosolver/aestimo-edu](https://github.com/aestimosolver/aestimo-edu) and the latest code zip packege can be downloaded at [https://github.com/aestimosolver/aestimo-edu/archive/main.zip](https://github.com/aestimosolver/aestimo-edu/archive/main.zip).
 
 **September 2020**
 
