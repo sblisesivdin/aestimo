@@ -33,6 +33,10 @@ We will appreciate if any scientific work done using Aestimo 1D will contain an 
 
 # News
 
+**November 2020**
+
+* Old aestimo_elementary branch is now moved to its own new repository and it is renamed as Aestimo EDU. With its simple and %100 pure Python code structure, it is very suitable to be used in education purposes. Code base can be found at https://github.com/aestimosolver/aestimo-edu and the latest code zip packege can be downloaded at https://github.com/aestimosolver/aestimo-edu/archive/main.zip
+
 **September 2020**
 
 * Our reference paper “[General-purpose open-source 1D self-consistent Schrödinger-Poisson Solver: Aestimo 1D](https://doi.org/10.1016/j.commatsci.2020.110015)” which gives  a general overview of the Aestimo 1D has been published online!
