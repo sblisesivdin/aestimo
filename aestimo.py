@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 Description = f'''
 Aestimo 1D Schrodinger-Poisson Solver
-Copyright (C) 2013-2022
+Copyright (C) 2013-2025
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -66,10 +66,10 @@ time0 = time.time()  # timing audit
 def alen(x):
     return 1 if np.isscalar(x) else len(x)
 
-#alen = np.alen 
+#alen = np.alen
 
 # Version
-__version__ = "3.0.0"
+__version__ = "3.0.1"
 
 # Logger
 logger = logging.getLogger('aestimo')

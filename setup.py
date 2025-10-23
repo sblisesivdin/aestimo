@@ -13,7 +13,7 @@ def read(fname):
 
 
 setup(  name='aestimo',
-        version='3.0.0',
+        version='3.0.1',
         description='A bandstructure simulator of semiconductor nanostructures called quantum wells.',
         long_description= read('README.md'),
         classifiers=[
@@ -28,7 +28,7 @@ setup(  name='aestimo',
            ],
         author='sblisesivdin',
         author_email='sblisesivdin@gmail.com',
-        url='http://www.aestimosolver.org',
+        url='https://aestimosolver.github.io/',
         license='GPLv3',
         keywords='quantum well semiconductor nanostructure optical transitions',
         package_dir = {'aestimo': ''},

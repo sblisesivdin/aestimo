@@ -152,7 +152,7 @@ def Ucomplap (nodes,n_max,elements,Nelements,coeff):
     ##
     ## Compute P1 finite element approximation of the differential operator:
     ## 
-    ##  - d ( coeff d (.)\dx)\dx
+    ##  - d ( coeff d (.)\\dx)\\dx
     ##
     ## @itemize @minus
     ## @item @var{nodes}: list of mesh nodes
